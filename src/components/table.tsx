@@ -18,6 +18,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   },
 }));
 
+
 const StyledTableRow = styled(TableRow)(({ theme }) => ({
   '&:nth-of-type(odd)': {
     backgroundColor: theme.palette.action.hover,
@@ -28,19 +29,9 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-function createData(
-  name: string,
-  ip: number,
-
-) {
-  return { name, ip };
-}
-
-const rows = [
-  createData('Frozen yoghurt', 159),
-];
 
 export default function CustomizedTables(props:any) {
+
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
@@ -52,10 +43,10 @@ export default function CustomizedTables(props:any) {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
-            <StyledTableRow key={row.name}>
+          {props.locs.map((row:any) => (
+            <StyledTableRow key={row.city}>
               <StyledTableCell component="th" scope="row">
-                {row.name}
+                {row.city.name}
               </StyledTableCell>
               <StyledTableCell align="right">{row.ip}</StyledTableCell>
     
