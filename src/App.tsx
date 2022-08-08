@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <ButtonAppBar></ButtonAppBar>
-     <OutlinedButtons></OutlinedButtons>
+      <SearchBar></SearchBar>
      
     </div>
   );

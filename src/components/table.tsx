@@ -40,7 +40,7 @@ const rows = [
   createData('Frozen yoghurt', 159),
 ];
 
-export default function CustomizedTables() {
+export default function CustomizedTables(props:any) {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
